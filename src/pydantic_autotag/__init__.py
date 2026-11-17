@@ -1,8 +1,8 @@
 import functools
+from collections.abc import Callable
 from types import UnionType
 from typing import (
     Annotated,
-    Callable,
     Literal,
     TypeAlias,
     TypeVar,
@@ -15,7 +15,6 @@ from typing import (
 
 from pydantic import BaseModel, Discriminator, Tag
 from pydantic.fields import FieldInfo
-
 
 Tagger: TypeAlias = Callable[[type[BaseModel]], str]
 
